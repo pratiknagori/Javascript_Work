@@ -1,7 +1,7 @@
 'use strict';
 //coding challenge 1
 
-const calAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+/* const calAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 console.log(calAverage(85, 54, 41));
 
 //TEST 1
@@ -26,3 +26,18 @@ const checkWinner = function (scoreDolphins, scoreKoalas) {
 }
 
 checkWinner(avgDolphins, avgKoalas);
+
+
+//coding challenge 2
+const bills = [125, 555, 44];
+
+for (let i = 0; i < bills.length; i++) {
+
+    const tipCal = bills[i] > 50 && bills[i] < 300 ? bills[i] * 0.15 : bills[i] * 0.20;
+    console.log(`The total Bill is ${bills[i]} and tip is ${tipCal} and your total bill is ${Number(bills[i]) + Number(tipCal)}`);
+}
+
+*/
+
+
+

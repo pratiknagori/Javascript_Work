@@ -130,6 +130,173 @@ console.log(yearUntilRetirement(1940, 'Bitu'));
 // alt + up arrow to move the line up
 
 // ###########################################################
-*/
+
 
 //INTRODUCTION TO ARRAYS
+//Array is type of data structure
+
+const friends = ["Pratik", "Parth", "Kartik"];
+console.log(friends);
+
+//another way of creating an array
+const years = new Array(1990, 1991, 1992, 1993);
+
+//Accessing arrays, arrays are 0 indexed
+console.log(friends[0]);
+console.log(friends[1]);
+
+//number of elements in array, it is not zero indexed
+console.log(friends.length);
+
+//friends.length - 1 below is an expression. Accessing last element of array
+console.log(friends[friends.length - 1]);
+
+//changing values,
+//only primitive values are immutable, arrays are not primitive, thus we can change the value of frineds[2] even if we defined it as const
+friends[2] = "Pam";
+console.log(friends);
+
+//Array can also store values of different types
+const firstName = 'Jonas';
+//Array having variables, expressions and another array itself
+const person = [firstName, 'Brothers', 5050 - 254, friends]
+console.log(person);
+console.log(person.length);
+
+const calcAge = function (birthYear) {
+    return 2022 - birthYear;
+}
+
+const age = [1990, 1991, 1992, 1995];
+console.log(calcAge(age[1]));
+
+//Array having functions
+const valArray = [calcAge(age[1]), calcAge(age[age.length - 1])];
+console.log(valArray);
+
+
+//Basic Array functions/methods
+
+const friends = ["Pratik", "Parth", "Kartik"];
+
+//push function/method allows you to add a new value to the end of an array
+friends.push("Pam");
+console.log(friends);
+
+//push function returns the length of the new array
+const newLength = friends.push("Pam");
+
+//unshift function/method allows you to add a new value to the start of an array
+friends.unshift("John");
+console.log(friends);
+
+//to remove the last elements from an array, it returns the removed element
+friends.pop();
+console.log(friends);
+
+//to remove the first elements from an array, it returns the removed element
+friends.shift();
+console.log(friends);
+
+//tells you the position of the element in the array
+console.log(friends.indexOf('Parth'));
+// returns -1 if not found
+
+//return if the element is present in the array or not (true or false) in es6 only. Follows STRICT mode
+console.log(friends.includes('Bobby'));
+
+
+//Objects is another type of data structure in Javascript. it will have a key value pair. Keys are also called as properties
+// { is called object literal context. Grouping of different variables that really belong together
+// in objects, the order doesnt matter when we retrieve them
+//Use arrays for more ordered data and objects with more unstructured data
+
+
+const pratikArray = {
+    firstName: "Pratik",
+    lastName: "Nagori",
+    age: 2022 - 1990,
+    jobs: "Developer",
+    friends: ["Pratik", "Parth", "Kartik"]
+};
+
+console.log(pratikArray);
+
+//Accessing object properties
+//ObjextName.propertykey
+
+console.log(pratikArray.lastName);
+console.log(pratikArray['lastName']);
+//you can use bracket operation which can be used to evaluate expression
+
+const nameKey = 'Name';
+console.log(pratikArray['first' + nameKey]);
+console.log(pratikArray['last' + nameKey]);
+
+//if you need to cmpute the propertyname use the bracket notation, if not then use . notation
+
+const interestedIn = prompt("What do you want to know about Jonas, choose between firstName, lastName, age, job and friends");
+console.log(interestedIn);
+console.log(pratikArray[interestedIn]); //result will be undefined if not matching any property
+
+//Adding new properties to the object
+
+pratikArray.location = "India";
+pratikArray['socialID'] = "pratiknagori@gmail.com";
+console.log(pratikArray);
+
+console.log(`${pratikArray.firstName} has ${pratikArray.friends.length} and his best friend name is ${pratikArray.friends[1]}`);
+
+
+//Object methods
+//Object can have function as well
+
+const pratikArray = {
+    firstName: "Pratik",
+    lastName: "Nagori",
+    age: 2022 - 1990,
+    birthYear: 1990,
+    jobs: "Developer",
+    friends: ["Pratik", "Parth", "Kartik"],
+    hasDriversLicense: true,
+    calcAge: function (birthYear) {
+        return 2022 - birthYear;
+    }
+};
+
+console.log(pratikArray.calcAge(1990));
+console.log(pratikArray['calcAge'](1990));
+console.log(pratikArray.calcAge(pratikArray.birthYear));
+console.log(pratikArray['calcAge'](pratikArray['birthYear']));
+*/
+
+//this variable
+const pratikArray = {
+    firstName: "Pratik",
+    lastName: "Nagori",
+    age: 2022 - 1990,
+    birthYear: 1990,
+    jobs: "Developer",
+    friends: ["Pratik", "Parth", "Kartik"],
+    hasDriversLicense: false,
+    //  calcAge: function () {
+    //      console.log(this);
+    //      return 2022 - this.birthYear; //this keyword points to the object calling the method (pratikArray). This is as good as pratikArray.birthYear. This is called object referencing 
+    //  }
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear; //Adding new properties to the object pratikArray, check line 244
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} years old and has ${this.hasDriversLicense ? "a" : "no"} drivers license`
+    }
+
+
+};
+
+console.log(pratikArray.age); //object pratikArray is accessing the property age
+
+console.log(pratikArray.getSummary());
+

@@ -1,0 +1,57 @@
+Algortihms
+
+Big O notation:
+Running time of an alogirthm or a piece of code.
+
+
+#Linear search
+left to right one by one
+
+good alogirthm if u dont know what the order of data inside an array is
+
+
+
+Hi,
+
+
+OOPS:
+I have gone through the OOPS concept videos. They are clear and gave good understanding of the pillars of OOPS programming.
+I am still struggling to completelty understand Encapsualtion concept.
+I understood that Encapsulation can be defined as Binding variables and methods into single entity.
+However, how it can be useful or maybe an example will help me better.
+I will go through other videos to try and understand it.
+
+There is gap between 2 and 3 lecture, related to arrays
+There are some things mentioned about List, sets, maps , tree which arent clear to me. What are list, maps reference did not understand.
+When to use list, when to use arrays.Need to check these things but I will figure them out. if anything i will call.
+
+Maybe a silly question but are method and function is one and the same thing in Programming language? or there is a difference.
+
+I am going through Arrays and Algorithms classes below:
+https://www.youtube.com/watch?v=v_luodP_mfE&list=PLhQjrBD2T383f9scHRNYJkior2VvYjpSL&index=4
+https://www.youtube.com/watch?v=yb0PY3LX2x8&list=PLhQjrBD2T383f9scHRNYJkior2VvYjpSL&index=6&ab_channel=CS50
+
+Have gained fair amount of understanding about Arrays and various types of Algorithms from above
+Big O Notation
+Linear Search
+Binary Search
+Sorting and Searching vs. Just Searching
+String Comparison
+Storing Data in Arrays
+Structs
+Sorting
+Selection Sort
+Bubble Sort
+
+Addition to above,
+I am continuing my Javascript tutorials which will include Datastructrues, Arrays and OOPS surrounding them.
+
+All my work is coding assignments and challenges as part of Javascript tutorials and work are commited under:
+https://github.com/pratiknagori/Javascript_Work.git
+I will start work on my SAAS assignments as well now 
+
+
+
+
+
+Last lecture was not clear, 
