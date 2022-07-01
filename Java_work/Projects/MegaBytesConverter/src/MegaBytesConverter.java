@@ -19,16 +19,24 @@ public class MegaBytesConverter {
     }
 
     // finding if a year is a leap year or not
-    public static boolean isLeapyear(int year) {
-        if (year < 1 || year > 9999) {
-            return false;
-        } else if (year % 4 == 0 && year % 100 !=0) {
-            return true;
-        } else if (year % 4 == 0 && year % 100 ==0 && year % 400 ==0) {
-            return true;
-        } else {
-            return false;
-        }
+    // public static boolean isLeapyear(int year) {
+    //     if (year < 1 || year > 9999) {
+    //         return false;
+    //     } else if (year % 4 == 0 && year % 100 !=0) {
+    //         return true;
+    //     } else if (year % 4 == 0 && year % 100 ==0 && year % 400 ==0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    public static boolean isLeapYear(int year){
+
+        if((year < 1 || year > 9999)) return false;
+
+        return ((year % 4==0)&&(year %100!=0))||(year%400==0);
+
     }
 
     public static boolean areEqualByThreeDecimalPlaces (double numOne, double numTwo) {
