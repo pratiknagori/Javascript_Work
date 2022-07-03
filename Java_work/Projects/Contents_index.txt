@@ -1,0 +1,6 @@
+# OOPSPart1 project consisits of classes, objects, setters and getters methods creation, this keyword and Constructors.
+It also consist of BankAccount project which allows a person to add or withdraw funds using concepts of object and constructors
+
+# SumCalculator has an excercise which demonstrates classes, object, setters and getters
+
+# Person has an excercise which demonstrates classes, object, setters and getters
