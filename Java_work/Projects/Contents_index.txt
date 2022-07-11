@@ -4,3 +4,4 @@ It also consist of BankAccount project which allows a person to add or withdraw 
 # SumCalculator has an excercise which demonstrates classes, object, setters and getters
 
 # Person has an excercise which demonstrates classes, object, setters and getters
+
